@@ -23,7 +23,7 @@ class CalculatorEngineTest {
     final double result = sut.sum(a, b);
 
     // Then
-    Assertions.assertEquals(21.1, result);
+    Assertions.assertEquals(21.2, result);
   }
 
 }

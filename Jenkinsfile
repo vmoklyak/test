@@ -42,11 +42,6 @@ pipeline {
        		sh "docker build -t registry:5000/calculator ."
        	}
        }
-       stage("Docker push") {
-       	steps {
-//        		sh "docker push registry:5000/calculator"
-       	}
-       }
        stage("Deploy to env") {
        	steps {
        		sh "docker run -d --rm -p 9999:9999 --name calculator registry:5000/calculator"

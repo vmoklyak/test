@@ -44,7 +44,7 @@ pipeline {
        }
        stage("Deploy to env") {
        	steps {
-       		sh "docker run -d --rm -p 9999:9999 --name calculator registry:5000/calculator"
+       		sh "docker run -d --rm --name calculator registry:5000/calculator"
        	}
        }
     }

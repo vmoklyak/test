@@ -47,6 +47,10 @@ pipeline {
        		sh "docker run -d --rm -p 9999:9999 --name calculator registry:5000/calculator"
        	}
        }
-
+      post {
+          always {
+              echo 'I will always say Hello again!'
+          }
+      }
     }
 }
